@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class MenuUIManager : MonoBehaviour
 {
 
+    //public Text BestPlayerName;
+
+
     [SerializeField] Text PlayerNameInput; 
 
     public void StartNew()
