@@ -10,6 +10,7 @@ public class MainManager : MonoBehaviour
     public Brick BrickPrefab;
     public int LineCount = 6;
     public Rigidbody Ball;
+    public static MainManager Instance;
 
     public Text ScoreText;
     public Text PlayerName;
@@ -21,8 +22,8 @@ public class MainManager : MonoBehaviour
     private int m_Points;
 
     //Best player data will be stored here
-    private static int BestScore;
-    private static string BestPlayer;
+    public int BestScore;
+    public string BestPlayer;
     
     private bool m_GameOver = false;
 
@@ -109,7 +110,7 @@ public class MainManager : MonoBehaviour
         }
     }
 
-    private void SetBestPlayer()
+    public void SetBestPlayer()
     {
         if (BestPlayer == null && BestScore == 0)
         {

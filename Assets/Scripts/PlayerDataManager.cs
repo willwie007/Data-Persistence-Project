@@ -9,10 +9,11 @@ public class PlayerDataManager : MonoBehaviour
     // singleton to load one instance of player name
     // and pass onto main scene
     public static PlayerDataManager Instance;
+    MainManager mainManager;
 
     public string PlayerName;
     public int Score;
-    //public GameObject playerData;
+    //public Text bestPlayerName;
 
 
     private void Awake()
@@ -20,9 +21,9 @@ public class PlayerDataManager : MonoBehaviour
         if(Instance == null)
         {
             DontDestroyOnLoad(gameObject);
-            Instance = this;    
+            Instance = this;
+            //SetBestPlayer();
         }
-        //playerData();
-
     }
+
 }
