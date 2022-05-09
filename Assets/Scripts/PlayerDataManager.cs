@@ -22,7 +22,7 @@ public class PlayerDataManager : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
             Instance = this;
-            //SetBestPlayer();
+     
         }
     }
 
